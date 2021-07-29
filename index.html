@@ -13,14 +13,32 @@
     <div class="wrapper">
         <header class="header">
             <div class="container flexelements container--relative">
+                <div class="header__logo">
+                    LL
+                </div>
                 <nav class="header__navigation-mobile">
+                    <div class="headerAfter"></div>
+                    <div class="headerBefore"></div>
                     <div class="mobileWrapper">
+                        <form class="search-mobileView" action="" method="post">
+                            <input class="search-mobileView__areaInput" type="text" name="" placeholder="Введите название товара">
+                            <button class="search-mobileView__areaButton" type="submit" aria-label="search">
+                                <svg class="icon icon--search" role="presentation" viewBox="0 0 18 17">
+                                    <g transform="translate(1 1)" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                        <path d="M16 16l-5.0752-5.0752"></path>
+                                        <circle cx="6.4" cy="6.4" r="6.4"></circle>
+                                    </g>
+                                </svg>
+                            </button>
+                        </form>
                         <ul class="header__mobileMenuList outside">
                             <li class="header__listOne"><a class="header__linkMobile" href="index.html">Главная</a></li>
                             <li class="header__listOne">
-                                <span class="header__linkMobile">Каталог</span>
+                                <span class="header__linkMobile">
+                                    <span class="header__linkSideList">Каталог</span>
+                                </span>
                                 <div class="inside">
-                                    <ul class="header__mobileMenuList">
+                                    <ul class="header__mobileMenuList" style="padding-bottom: 20px;">
                                         <li class="header__listTwo"><a class="header__linkMobile-inner" href="#">Показать все</a></li>
                                         <li class="header__listTwo"><a class="header__linkMobile-inner" href="#">Футболки</a></li>
                                         <li class="header__listTwo"><a class="header__linkMobile-inner" href="#">Худи</a></li>
@@ -31,6 +49,43 @@
                             <li class="header__listOne"><a class="header__linkMobile" href="#">О нас</a></li>
                             <li class="header__listOne"><a class="header__linkMobile" href="#">Новости</a></li>
                         </ul>
+                        <div class="header__settingsMobile settinsMobile">
+                            <a class="header__profile" href="#">
+                                Профиль
+                                <svg class="icon icon--profile" role="presentation" viewBox="0 0 20 20">
+                                    <g transform="translate(1 1)" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                        <path d="M0 18c0-4.5188182 3.663-8.18181818 8.18181818-8.18181818h1.63636364C14.337 9.81818182 18 13.4811818 18 18"></path>
+                                        <circle cx="9" cy="4.90909091" r="4.90909091"></circle>
+                                    </g>
+                                </svg>
+                            </a>
+                            <div class="header__profile">
+                                Язык
+                                <div class="settinsMobile__select">
+                                    <select title="Language selection" dir="rtl">
+                                        <option value="rus" selected="selected">Русский</option>
+                                        <option value="ukr">Українська</option>
+                                        <option value="eng">English</option>
+                                    </select>
+                                    <svg class="select--icon" role="presentation" viewBox="0 0 19 12">
+                                        <polyline fill="none" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="header__profile">
+                                Валюта
+                                <div class="settinsMobile__select">
+                                    <select title="Currency selection">
+                                        <option value="rub">RUB</option>
+                                        <option value="uah" selected="selected">UAH</option>
+                                        <option value="usd">USD</option>
+                                    </select>
+                                    <svg class="select--icon" role="presentation" viewBox="0 0 19 12">
+                                        <polyline fill="none" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </nav>
                 <nav class="header__navigation">
@@ -42,9 +97,6 @@
                         <li><a class="header__navLinks" href="#">Новости</a></li>
                     </ul>
                 </nav>
-                <div class="header__logo">
-                    
-                </div>
                 <div class="header__toolbar">
                     <div class="search">
                         <svg class="icon icon--search" role="presentation" viewBox="0 0 18 17">
@@ -52,18 +104,6 @@
                                 <path d="M16 16l-5.0752-5.0752"></path>
                                 <circle cx="6.4" cy="6.4" r="6.4"></circle>
                             </g>
-                        </svg>
-                    </div>
-                    <div class="favorites">
-                        <svg class="icon icon--favorites" role="presentation" viewBox="0 0 512 512">
-                            <path d="M378.667,21.333c-56.792,0-103.698,52.75-122.667,77.646c-18.969-24.896-65.875-77.646-122.667-77.646
-                                     C59.813,21.333,0,88.927,0,172c0,45.323,17.99,87.562,49.479,116.469c0.458,0.792,1.021,1.521,1.677,2.177l197.313,196.906
-                                     c2.083,2.073,4.802,3.115,7.531,3.115s5.458-1.042,7.542-3.125L467.417,283.74l2.104-2.042c1.667-1.573,3.313-3.167,5.156-5.208
-                                     c0.771-0.76,1.406-1.615,1.896-2.542C499.438,245.948,512,209.833,512,172C512,88.927,452.188,21.333,378.667,21.333z
-                                     M458.823,261.948c-0.292,0.344-0.563,0.708-0.802,1.083c-1,1.146-2.094,2.156-3.177,3.188L255.99,464.927L68.667,277.979
-                                     c-0.604-1.188-1.448-2.271-2.479-3.177C37.677,249.906,21.333,212.437,21.333,172c0-71.313,50.24-129.333,112-129.333
-                                     c61.063,0,113.177,79.646,113.698,80.448c3.938,6.083,14,6.083,17.938,0c0.521-0.802,52.635-80.448,113.698-80.448
-                                     c61.76,0,112,58.021,112,129.333C490.667,205.604,479.354,237.552,458.823,261.948z"></path>
                         </svg>
                     </div>
                     <div class="profile">
@@ -86,7 +126,7 @@
                     </button>
                 </div>
                 <div class="pageOverlay"></div>
-                <div class="header__cartArea cartArea">
+                <div class="cartArea">
                     <div class="cartArea__header">
                         <span class="cartArea__title">Корзина</span>
                         <button class="cartArea__close" aria-label="close cart">
@@ -95,7 +135,7 @@
                             <div class="closeBottom"></div>
                         </button>
                     </div>
-                    <div class="cartArat__body">
+                    <div class="cartArea__body">
 
                     </div>
                 </div>
@@ -108,6 +148,7 @@
 
         </footer>
     </div>
-    <script src="scripts/menuBurger.js"></script>
+    <script src="scripts/ibg.js"></script>
+    <script src="scripts/index-script.js"></script>
 </body>
 </html>
