@@ -392,6 +392,7 @@ select::-ms-expand {
 
 .footer {
     width: 100%;
+    /* background-color: #f4f3f1; */
     background-color: #fff;
     padding: 34px 0;
     display: flex;
@@ -420,11 +421,10 @@ select::-ms-expand {
 .footer__title {
     color: var(--main-header-color);
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: 500;
     font-style: normal;
-    letter-spacing: .2em;
     margin-bottom: 20px;
 }
 .footer__list {
@@ -459,7 +459,8 @@ select::-ms-expand {
 .footer__input {
     width: 100%;
     display: block;
-    padding: 12px 14px;
+    padding: 0px 14px;
+    height: 44px;
     border: 1px solid #d9d9d9;
     color: var(--main-header-color);
     transition: border-color .1s ease-in-out;
@@ -472,7 +473,8 @@ select::-ms-expand {
 .footer__button {
     cursor: pointer;
     margin-top: 20px;
-    padding: 14px 28px;
+    height: 44px;
+    padding: 0px 28px;
     font-size: 13px;
     text-transform: uppercase;
     text-align: center;
