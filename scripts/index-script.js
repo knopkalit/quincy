@@ -1,5 +1,7 @@
 let navLinks = document.querySelectorAll('.header__linkMobile'),
-    sideList = document.querySelectorAll('.header__linkSideList');
+    sideList = document.querySelectorAll('.header__linkSideList'),
+    productCard = document.querySelectorAll('.productCard'),
+    sizeLine = document.querySelectorAll('.productCard__sizeLine');
 
 document.querySelector('.sidebar').addEventListener('click', function() {
     document.querySelector('.sidebar').classList.toggle('open-menu');
@@ -36,5 +38,24 @@ navLinks[1].addEventListener('click', function() {
 for (let i = 0; i < navLinks.length; i++) {
     navLinks[1].addEventListener('click', function() {
         sideList[0].classList.toggle('emerald');
+    });
+}
+for (let i = 0; i < productCard.length; i++) {
+    productCard[i].addEventListener('mouseenter', function() {
+        let heightSizeLine = sizeLine[i].clientHeight;
+        sizeLine[i].style.top = 'calc(100% - ' + heightSizeLine + 'px)';
+        for (let j = 0; j < productCard.length; j++) {
+            if (i != j) {
+                //productCard[j].style.opacity = '0.5';
+                productCard[j].style.transition = '0.3s';
+            }
+        }
+    });
+    productCard[i].addEventListener('mouseleave', function() {
+        sizeLine[i].style.top = 'calc(100% - 15px)';
+        for (let j = 0; j < productCard.length; j++) {
+                //productCard[j].style.opacity = '1';
+                productCard[j].style.transition = '0.3s';
+        }
     });
 }
