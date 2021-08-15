@@ -34,6 +34,7 @@ document.addEventListener('keydown', function(event) {
 });
 navLinks[1].addEventListener('click', function() {
     document.querySelector('.inside').classList.toggle('hide');
+    document.querySelector('.header__arrow').classList.toggle('arrow-rotate');
 });
 for (let i = 0; i < navLinks.length; i++) {
     navLinks[1].addEventListener('click', function() {

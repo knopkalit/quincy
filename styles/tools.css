@@ -1,0 +1,102 @@
+/* Tools */
+
+.flexelements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.fx {
+    display: flex;
+}
+.fx-fd-row {
+    flex-direction: row;
+}
+.fx-fd-column {
+    flex-direction: column;
+}
+.fx-jc-c {
+    justify-content: center;
+}
+.fx-jc-sb {
+    justify-content: space-between;
+}
+.fx-ai-c {
+    align-items: center;
+}
+.container--relative {
+    position: relative;
+}
+.indent {
+    margin-bottom: 70px;
+}
+.active--menu {
+    top: 0 !important;
+    transition: 0.4s;
+    overflow: auto;
+}
+.active--cart {
+    right: 0 !important;
+    transition: 0.5s;
+}
+.hide {
+    max-height: 158px;
+    visibility: visible;
+}
+.undisplay {
+    display: none;
+}
+.lock {
+    overflow: hidden;
+}
+.open-menu .burgerTop {
+    -webkit-transform: rotate(-45deg) translateY(5px) translateX(-5px);
+    transform: rotate(-45deg) translateY(5px) translateX(-5px);
+    background-color: #fff;
+}
+.open-menu .burgerMiddle {
+    opacity: 0;
+} 
+.open-menu .burgerBottom {
+    -webkit-transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(45deg) translate(-5px, -5px);
+    background-color: #fff;
+}
+.emerald {
+    position: relative;
+}
+.emerald::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    background: url(../graphics/png/squiggle.png) repeat-x 0 bottom;
+    height: 5px;
+    transition: opacity 150ms ease-out 0ms;
+    animation: emeraldwave 2s linear infinite;
+}
+.soldOut-item {
+    pointer-events: none;
+    color: #f31414;
+    border: 1px dashed #f31414;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+.arrow-rotate {
+    transform: rotate(-180deg);
+}
+/* Animation */
+
+@keyframes emeraldwave {
+	from {
+		background-position: 0px bottom;
+	}
+	to {
+		background-position: -65px bottom;
+	}
+}

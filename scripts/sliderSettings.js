@@ -32,14 +32,19 @@ $(document).ready(function(){
             }
         ]
     });
-    /* $('.presentation-inner').slick({
-        adaptiveHeight: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+    $('.presentation-inner').slick({
+        slidesToShow: 5,
+        slidesToScroll: 5,
         infinite: false,
         draggable: false,
         responsive: [
             {
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            }, {
                 breakpoint: 991,
                 settings: {
                     slidesToShow: 3,
@@ -59,5 +64,5 @@ $(document).ready(function(){
                 }
             }
         ]
-    }); */
+    });
 });

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index-style.css">
+    <link rel="stylesheet" href="styles/tools.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/reset.css">
     <title>QUINCY | Магазин одежды</title>
@@ -36,6 +37,11 @@
                             <li class="header__listOne">
                                 <span class="header__linkMobile">
                                     <span class="header__linkSideList">Каталог</span>
+                                    <svg class="header__arrow" version="1.1" id="Capa_1"x="0px" y="0px" width="11px" height="11px" viewBox="0 0 451.847 451.847" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                        c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                        c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+                                    </svg>
                                 </span>
                                 <div class="inside">
                                     <ul class="header__mobileMenuList" style="padding-bottom: 20px;">
@@ -67,8 +73,10 @@
                                         <option value="ukr">Українська</option>
                                         <option value="eng">English</option>
                                     </select>
-                                    <svg class="select--icon" role="presentation" viewBox="0 0 19 12">
-                                        <polyline fill="none" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
+                                    <svg class="select--icon" version="1.1" id="Capa_1"x="0px" y="0px" viewBox="0 0 451.847 451.847" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                        c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                        c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
                                     </svg>
                                 </div>
                             </div>
@@ -80,8 +88,10 @@
                                         <option value="uah" selected="selected">UAH</option>
                                         <option value="usd">USD</option>
                                     </select>
-                                    <svg class="select--icon" role="presentation" viewBox="0 0 19 12">
-                                        <polyline fill="none" points="17 2 9.5 10 2 2" fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
+                                    <svg class="select--icon" version="1.1" id="Capa_1"x="0px" y="0px" viewBox="0 0 451.847 451.847" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                        c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                        c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
                                     </svg>
                                 </div>
                             </div>
@@ -142,10 +152,13 @@
             </div>
         </header>
         <main class="content">
-            <div class="cover ibg">
-                
-            </div>
             <div class="container">
+                <div class="cover indent">
+                    <img src="" alt="">
+                </div>
+                <div class="content__about indent">
+                    
+                </div>
                 <div class="presentation indent">
                     <h1 class="title--h1" style="margin-bottom: 25px;">Акции <span>&</span> предложения</h1>
                     <div class="presentation-inner content__presentation">
@@ -179,7 +192,7 @@
                     </div>
                 </div>
                 <div class="popularProd indent">
-                    <h1 class="title--h1" style="margin-bottom: 25px;">Популярное</h1>
+                    <h1 class="title--h1" style="margin-bottom: 25px;">Популярное (<span>хит</span>)</h1>
                     <div class="popularProd-inner content__popularProd">
                         <div class="productCard">
                             <div class="productCard-inner">
@@ -323,17 +336,14 @@
                 <div class="content__promotion indent">
 
                 </div>
-                <div class="content__about indent">
-                    
-                </div>
                 <div class="content__catalog indent">
-
-                </div>
-                <div class="content__info indent">
 
                 </div>
                 <div class="content__news indent">
                     
+                </div>
+                <div class="content__info indent">
+
                 </div>
             </div>
         </main>
@@ -486,7 +496,6 @@
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts/ibg.js"></script>
     <script src="scripts/sliderSettings.js"></script>
     <script src="scripts/slick.min.js"></script>
     <script src="scripts/index-script.js"></script>
