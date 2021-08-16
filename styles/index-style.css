@@ -328,7 +328,7 @@ select::-ms-expand {
     align-items: center;
     position: relative;
     height: 70px;
-    background: inherit;
+    background-color: #fff;
     text-align: center;
     box-shadow: 0 -1px #d9d9d9 inset;
     padding: 0px 30px;
