@@ -65,4 +65,40 @@ $(document).ready(function(){
             }
         ]
     });
+    $('.product__choose-inner').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: false,
+        draggable: false,
+        asNavFor: '.product__single-inner',
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    });
+    $('.product__single-inner').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        infinite: false,
+        draggable: false,
+        touchMove: false,
+        asNavFor: '.product__choose-inner',
+        responsive: [ 
+            {
+                breakpoint: 575,
+                settings: {
+                    touchMove: true,
+                    fade: false,
+                }
+            }
+        ]
+    });
 });
