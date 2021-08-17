@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../styles/tools.css">
         <link rel="stylesheet" href="../styles/normalize.css">
         <link rel="stylesheet" href="../styles/reset.css">
+        <link rel="stylesheet" href="../styles/swiper.min.css">
         <title></title>
     </head>
 <body>
@@ -20,38 +21,58 @@
             <div class="container product">
                 <div class="product__absolutelyInfo">
                     <div class="product__photoInfo productWrapper">
-                        <div class="product__single">
-                            <div class="product__single-inner">
-                                <div class="product__singleItem">
-                                    <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
-                                </div>
-                                <div class="product__singleItem">
-                                    <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
-                                </div>
-                                <div class="product__singleItem">
-                                    <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
-                                </div>
-                                <div class="product__singleItem">
-                                    <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
-                                </div>
+                        <div class="product__single swiper-container">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                            </div>
                             </div>
                         </div>
-                        <div class="product__choose">
-                            <div class="product__choose-inner">
-                                <div class="product__chooseItem">
-                                    <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                            <div class="product__gallery swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                                    </div>
                                 </div>
-                                <div class="product__chooseItem">
-                                    <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                                <div class="slide-button-prev fx fx-ai-c fx-jc-c" style="left: 0; transform: rotate(90deg);">
+                                    <svg class="slide__arrow" version="1.1" id="Capa_1"x="0px" y="0px"viewBox="0 0 451.847 451.847" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                        c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                        c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+                                    </svg>
                                 </div>
-                                <div class="product__chooseItem">
-                                    <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
-                                </div>
-                                <div class="product__chooseItem">
-                                    <img src="https://cdn.shopify.com/s/files/1/0012/7919/7273/products/O1CN01uJI7TA1z5FDEHsN3W__178076662_570x.jpg?v=1603145934" alt="Product photo">
+                                <div class="slide-button-next fx fx-ai-c fx-jc-c" style="right: 0; transform: rotate(-90deg);">
+                                    <svg class="slide__arrow" version="1.1" id="Capa_1"x="0px" y="0px"viewBox="0 0 451.847 451.847" xml:space="preserve">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                        c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                        c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+                                    </svg>
                                 </div>
                             </div>
-                        </div>
                     </div>
                     <div class="product__rightBlock productWrapper">
                         <div class="product__rightBlock-inner" style="padding: 0 0 0 5px;">
@@ -298,9 +319,8 @@
             </div>
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/swiper.min.js"></script>
     <script src="../scripts/sliderSettings.js"></script>
-    <script src="../scripts/slick.min.js"></script>
     <script src="../scripts/product-script.js"></script>
 </body>
 </html>

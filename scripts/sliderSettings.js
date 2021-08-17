@@ -1,104 +1,80 @@
-$(document).ready(function(){
-    $('.popularProd-inner').slick({
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        infinite: false,
-        draggable: false,
-        responsive: [
-            {
-                breakpoint: 1440,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                }
-            }, {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            }, {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            } , {
-                breakpoint: 400,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }
-        ]
-    });
-    $('.presentation-inner').slick({
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        infinite: false,
-        draggable: false,
-        responsive: [
-            {
-                breakpoint: 1440,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                }
-            }, {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            }, {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            } , {
-                breakpoint: 400,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }
-        ]
-    });
-    $('.product__choose-inner').slick({
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        infinite: false,
-        draggable: false,
-        asNavFor: '.product__single-inner',
-        focusOnSelect: true,
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
-            }
-        ]
-    });
-    $('.product__single-inner').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        infinite: false,
-        draggable: false,
-        touchMove: false,
-        asNavFor: '.product__choose-inner',
-        responsive: [ 
-            {
-                breakpoint: 575,
-                settings: {
-                    touchMove: true,
-                    fade: false,
-                }
-            }
-        ]
-    });
+let gallery = new Swiper('.product__gallery', {
+    navigation: {
+        nextEl: '.slide-button-next',
+        prevEl: '.slide-button-prev'
+    },
+    simulateTouch: true,
+    slidesPerView: 3,
+    spaceBetween: 10,
+    watchOverFlow: true,
+    slideToClickedSlide: true,
+    breakpoints: {
+        991: {
+            slidesPerView: 4,
+            spaceBetween: 14,
+        }, 769: {
+            slidesPerView: 3,
+            spaceBetween: 16
+        }, 481: {
+            spaceBetween: 14
+        }, 320: {
+            spaceBetween: 12,
+        }
+    }
+});
+let single = new Swiper('.product__single', {
+    slidesPerView: 1,
+    simulateTouch: false,
+    slideToClickedSlide: true,
+    thumbs: {
+        swiper: gallery
+    }
+});
+let popularProd = new Swiper('.popularProd-inner', {
+    navigation: {
+        nextEl: '.slide-button-next',
+        prevEl: '.slide-button-prev'
+    },
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    simulateTouch: false,
+    breakpoints: {
+        1440: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+        }, 991: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        }, 575: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        }, 400: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        }
+    }
+});
+let presentation = new Swiper('.presentation-inner', {
+    navigation: {
+        nextEl: '.slide-button-next',
+        prevEl: '.slide-button-prev'
+    },
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    simulateTouch: false,
+    breakpoints: {
+        1440: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+        }, 991: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        }, 575: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        }, 400: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        }
+    }
 });
