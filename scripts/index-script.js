@@ -16,7 +16,7 @@ document.querySelector('.cart').addEventListener('click', function() {
     document.querySelector('.cartArea').classList.add('active--cart');
     document.querySelector('.pageOverlay').classList.add('visible');
 });
-document.querySelector('.cartArea__close').addEventListener('click', function() {
+document.querySelector('.close').addEventListener('click', function() {
     document.querySelector('.cartArea').classList.remove('active--cart');
     document.querySelector('.pageOverlay').classList.remove('visible');
 });
