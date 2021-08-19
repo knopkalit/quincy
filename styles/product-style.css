@@ -272,12 +272,12 @@ button {
 }
 .sizeList-mobile {
     width: 100%;
-    max-height: 60%;
     bottom: -100%;
     z-index: 6;
     position: fixed;
     background-color: #fff;
     color: var(--main-header-color);
+    transition: bottom .4s ease;
 }
 .sizeList-mobile__header {
     padding: 22px 20px;
@@ -288,7 +288,11 @@ button {
     font-weight: 500;
 }
 .sizeList-mobile__content {
-
+    position: relative; 
+    overflow: hidden; 
+    width: 100%; 
+    height: auto; 
+    min-height: 0px;
 }
 .sizeList-mobile__footer {
     padding: 22px 20px;
@@ -439,14 +443,11 @@ button {
 }
 .footer__button {
     margin-top: 20px;
-    height: 44px !important;
-}
-.settings__button {
-    height: 42px;
 }
 .footer__button, .settings__button {
     cursor: pointer;
     padding: 0px 28px;
+    height: 44px;
     font-size: 13px;
     text-transform: uppercase;
     text-align: center;
@@ -605,12 +606,16 @@ button {
         margin: 0 0 22px;
     }
     .sizeBlock__select {
+        max-height: 40vh;
     }
     .sizeBlock__selectList {
         padding: 22px 20px;
         font-size: 13px;
         font-weight: 500;
         border-bottom: 1px solid rgba(200,199,199,.5)
+    }
+    .sizeBlock__selectList:last-of-type {
+        border-bottom: 0;
     }
     .footer__inner, .settings__block-inner {
         flex-direction: column !important;

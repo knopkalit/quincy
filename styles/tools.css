@@ -49,7 +49,7 @@
     transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
 }
 .pageOverlay.visible {
-    opacity: 0.3;
+    opacity: 0.5;
     visibility: visible
 }
 .close {
@@ -146,6 +146,9 @@
     .fe-45-2 {
         pointer-events: auto;
         opacity: 1;
+    }
+    .lock-mobile {
+        overflow: hidden;
     }
 }
 
