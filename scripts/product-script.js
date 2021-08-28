@@ -3,8 +3,21 @@ sizeListItem = document.querySelectorAll('.sizeBlock__selectList');
 if (!document.querySelector('.sizeBlock__list').classList.contains('undisplay')) {
     document.querySelector('.sizeBlock__arrow').classList.remove('arrow-rotate');
 }
-
-sizeBlock.addEventListener('click', function(event) {
+document.querySelector('body').addEventListener('click', function(event) {
+    if (!event.target.classList.contains('sizeBlock-inner') && !event.target.classList.contains('sizeBlock__list')) {
+        document.querySelector('.sizeBlock__arrow').classList.remove('arrow-rotate');
+        document.querySelector('.sizeBlock__list').classList.add('undisplay');
+        document.body.classList.remove('lock-mobile');
+        document.querySelector('.settings__select').classList.remove('fe-45-1');
+        document.querySelector('.settings__select').classList.remove('fe-45-2');
+        document.querySelector('.settings__color').classList.remove('fe-45-1');
+        document.querySelector('.settings__color').classList.remove('fe-45-2');
+        document.querySelector('.titleManagement').classList.remove('fe-45-1');
+        document.querySelector('.titleManagement').classList.remove('fe-45-2');
+        document.querySelector('.sizeBlock-inner').classList.remove('fe-45-1');
+    }
+});
+sizeBlock.addEventListener('click', function() {
     document.querySelector('.sizeBlock__arrow').classList.toggle('arrow-rotate');
     document.querySelector('.sizeBlock__list').classList.toggle('undisplay');
     document.querySelector('.settings__select').classList.toggle('fe-45-1');
@@ -13,7 +26,7 @@ sizeBlock.addEventListener('click', function(event) {
     document.querySelector('.settings__color').classList.toggle('fe-45-2');
     document.querySelector('.titleManagement').classList.toggle('fe-45-1');
     document.querySelector('.titleManagement').classList.toggle('fe-45-2');
-    document.querySelector('.sizeBlock-inner').classList.toggle('fe-45-1');
+    //document.querySelector('.sizeBlock-inner').classList.toggle('fe-45-1');
 });
 for (let i = 0; i < sizeListItem.length; i++) {
     sizeListItem[i].addEventListener('click', function (event) {

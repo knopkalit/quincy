@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,800&display=swap');
 *,
 *::after,
 *::before {
@@ -41,10 +42,25 @@ button {
     margin: 0 auto;
 }
 /* Header */
+.pre-header {
+    width: 100%;
+    height: 50px;
+    background-color: var(--main-header-color-);
+    z-index: 3;
+}
+.pre-header__left {
 
+}
+.pre-header__mail {
+    margin-right: 20px;
+}
+.pre-header__phone {
+}
+.pre-header__right {
+
+}
 .header {
-    font-family: 'Montserrat', sans-serif !important;
-    position: fixed;
+    font-family: 'Source Sans Pro', sans-serif !important;
     height: 70px;
     width: 100%;
     background-color: #fff;
@@ -96,6 +112,10 @@ button {
     visibility: hidden;
     transition: max-height .35s ease-in-out, visibility .35s ease-in-out;
     overflow: hidden;
+}
+.header__logo {
+    position: absolute;
+    left: 50px;
 }
 .header__mobileMenuList {
     width: 100%;
@@ -185,28 +205,30 @@ select::-ms-expand {
 }
 .header__navigation {
     height: 100%;
-    font-weight: 500;
     font-style: normal;
-    font-size: 14px;
-    text-transform: uppercase;
-    white-space: nowrap;
 }
 .header__toolbar {
     display: flex;
+    position: absolute;
+    right: 50px;
     flex-direction: row;
     align-items: center;
     height: 100%;
 }
-.header__navigation ul {
-    display: flex;
-    flex-direction: row;
-}
-.header__navigation li {
-    position: relative;
-    padding: 28px 0px;
+.header__nav {
     margin: 0px 15px;
 }
-.header__navigation li:after {
+.header__navLinks {
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--main-header-color);
+}
+.header__navLinks:after {
     position: absolute;
     transition: 0.3s;
     content: '';
@@ -217,13 +239,72 @@ select::-ms-expand {
     height: 2px;
     background-color: var(--main-header-color);
 }
-.header__navigation li:hover:after {
+.header__nav:hover .header__navLinks:after {
     opacity: 1;
     width: 100%;
     left: 0;
 }
-.header__navLinks {
-    height: 100%;
+.header__nav.focused .header__dropdownMenu {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    transition: transform .25s ease, opacity 0ms, visibility 0ms;
+}
+.header__nav.focused .header__dropdownMenu .header__dropdownMenu-column {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform .3s ease, opacity .2s linear;
+    transition-delay: .2s;
+}
+.header__dropdownMenu {
+    width: 100%;
+    padding: 40px;
+    padding-top: 16px;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+    max-height: 800px;
+    top: 70px;
+    left: 0;
+    right: 0;
+    transition: transform .1s ease, opacity 0ms linear .1s, visibility 0ms linear .1s;
+    transform-origin: top center;
+    transform: scaleY(0);
+}
+.header__dropdownMenu-inner {
+    max-width: 1344px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+}
+.header__dropdownMenu-column {
+    width: 16.666666%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: transform .1s, opacity .1s;
+    transition-delay: 0s;
+    padding-top: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: left;
+}
+.header__dropdownMenu-title {
+    color: var(--main-header-color);
+    margin-bottom: 14px;
+    font-size: 16px;
+}
+.header__dropdownMenu-link {
+    display: block;
+    color: #757575;
+    font-size: 15px;
+    line-height: 1.428571;
+    margin-bottom: 6px;
+}
+.header__dropdownMenu-link:hover {
     color: var(--main-header-color);
 }
 .profile, .search, .cart {
@@ -627,9 +708,7 @@ select::-ms-expand {
 /* Adaptive block */
 
 @media (max-width: 1120px) {
-    .header__logo {
-        position: unset;
-    }
+    
 }
 @media (max-width: 991px) {
     .indent {
@@ -637,6 +716,7 @@ select::-ms-expand {
     }
     .header {
         box-shadow: 0px 1px 3px rgba(0,0,0,0.50);
+        position: fixed;
     }
     .header__navigation-mobile {
         display: block;
@@ -646,6 +726,12 @@ select::-ms-expand {
     }
     .container {
         padding: 0px 25px;
+    }
+    .header__logo {
+        left: 25px;
+    }
+    .header__toolbar {
+        right: 25px;
     }
     .cart {
         margin-left: 0px;
@@ -658,7 +744,11 @@ select::-ms-expand {
         width: 100%;
         transition: 0.5s;
     }
-    .profile, .search, .header__navigation, .productCard__sizeLine {
+    .profile, .search, 
+    .header__navigation, 
+    .productCard__sizeLine, 
+    .pre-header, 
+    .header__dropdownMenu {
         display: none;
     }
     .header__cartArea {
@@ -751,16 +841,6 @@ select::-ms-expand {
     right: 0 !important;
     transition: 0.5s;
 }
-.hide {
-    max-height: 158px;
-    visibility: visible;
-}
-.undisplay {
-    display: none;
-}
-.lock {
-    overflow: hidden;
-}
 .open-menu .burgerTop {
     -webkit-transform: rotate(-45deg) translateY(5px) translateX(-5px);
     transform: rotate(-45deg) translateY(5px) translateX(-5px);
@@ -773,29 +853,4 @@ select::-ms-expand {
     -webkit-transform: rotate(45deg) translate(-5px, -5px);
     transform: rotate(45deg) translate(-5px, -5px);
     background-color: #fff;
-}
-.emerald {
-    position: relative;
-}
-.emerald::after {
-    content: " ";
-    position: absolute;
-    display: block;
-    left: 0;
-    right: 0;
-    background: url(../graphics/png/squiggle.png) repeat-x 0 bottom;
-    height: 5px;
-    transition: opacity 150ms ease-out 0ms;
-    animation: emeraldwave 2s linear infinite;
-}
-
-/* Animation */
-
-@keyframes emeraldwave {
-	from {
-		background-position: 0px bottom;
-	}
-	to {
-		background-position: -65px bottom;
-	}
 }
